@@ -5,7 +5,7 @@ Python module to parse FastQC output data.
 from __future__ import print_function
 
 
-class Parser(object):
+class Fadapa(object):
     """
     Returns a parsed data object for given fastqc data file
 
