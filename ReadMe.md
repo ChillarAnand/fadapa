@@ -1,11 +1,32 @@
-# Welcome to Fadapa
-The Easiest way to parse FastQC results.
+## Welcome to Fadapa
+FAstqc DAta PArser - The Easiest way to parse FastQC results.
 
-# Installation
+
+## PyPI status:
+
+![https://pypi.python.org/pypi/fadapa/](https://pypip.in/v/fadapa/badge.png)
+![https://pypi.python.org/pypi/fadapa/](https://pypip.in/d/fadapa/badge.png)
+
+## Installation
+
+Recomended way to install is using `pip`
+   
 
     pip install fadapa
 
-# Usage
+Alternatively you can install `esay_install`
+
+
+    easy_install fadapa
+    
+You can also install from Github source code.
+
+    cd 
+    git clone https://github.com/fadapa/fadapa.git
+    cd fadapa
+    python setup.py install
+    
+## Usage
   
     # import fadapa
     from fadapa import Fadapa
@@ -27,3 +48,10 @@ The Easiest way to parse FastQC results.
 
     #get cleaned data of any module
     print(f.clean_data('module name'))
+
+
+## Author
+
+[Anand Reddy Pandikunta](http://www.avilpage.com)
+
+Github: [ChillarAnand](https://github.com/ChillarAnand)
