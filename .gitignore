@@ -1,1 +1,5 @@
 *.pyc
+.coverage
+.ipynb_checkpoints/
+*.ipynd
+*.ipynb
