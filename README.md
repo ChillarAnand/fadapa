@@ -2,27 +2,26 @@
 FAstqc DAta PArser - The Easiest way to parse FastQC results.
 
 
-## PyPI status:
-
+[![Build](https://api.travis-ci.org/fadapa/fadapa.png?branch=master)](http://travis-ci.org/fadapa/fadapa/)
+[![Coverage](https://coveralls.io/repos/fadapa/fadapa/badge.png?branch=master)](https://coveralls.io/r/fadapa/fadapa?branch=master)
 [![Latest Version](https://pypip.in/version/fadapa/badge.svg?text=version)](https://pypi.python.org/pypi/fadapa/)
-[![Downloads](https://pypip.in/download/fadapa/badge.svg)](https://pypi.python.org/pypi/fadapa/)
 [![Supported Python versions](https://pypip.in/py_versions/fadapa/badge.svg)](https://pypi.python.org/pypi/fadapa/)
-[![License](https://pypip.in/license/fadapa/badge.svg)](https://pypi.python.org/pypi/fadapa/)
+
 
 
 ## Installation
 
-Recomended way to install is using `pip`
+1. Recomended way to install is using `pip`
    
 
     pip install fadapa
 
-Alternatively you can install `esay_install`
+2. Alternatively you can install `esay_install`
 
 
     easy_install fadapa
     
-You can also install from Github source code.
+3. You can also install from Github source code.
 
     cd 
     git clone https://github.com/fadapa/fadapa.git
@@ -56,4 +55,3 @@ You can also install from Github source code.
 ## Author
 
 [Anand Reddy Pandikunta](http://www.avilpage.com)
-
