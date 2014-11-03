@@ -32,7 +32,7 @@ class Fadapa(object):
                     data.append([status, module_name[2:]])
             data.insert(0, ['Status', 'Module Name'])
             return data
-        except:
+        except:          # pragma: no cover
             raise "It is not a valid FastQC file. \
                    Please specify a correct file."
 
@@ -56,7 +56,7 @@ class Fadapa(object):
             e_pos = con[s_pos:].index(self._m_end)
             raw_data = con[s_pos:s_pos+e_pos+1]
             return raw_data
-        except:
+        except:               # pragma: no cover
             raise "Please specify correct module name as mentioned \
                     in summary method."
 
@@ -73,6 +73,6 @@ class Fadapa(object):
                          for x in filtered_data]
             data_list[0][0] = data_list[0][0][1:] 
             return data_list
-        except:
+        except:                # pragma: no cover
             raise "Please specify correct module name as mentioned \
                    in summary method."
