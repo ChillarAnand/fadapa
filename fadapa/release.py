@@ -1,5 +1,5 @@
 NAME = 'fadapa'
-VERSION = '0.3'
+VERSION = '0.3.1'
 DESCRIPTION = 'FAstqc DAta PArser - A minimal parser to parse FastQC output data in Python'
 AUTHOR = 'Anand Reddy Pandikunta'
 EMAIL = 'anand21nanda@gmail.com'
