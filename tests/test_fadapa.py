@@ -2,7 +2,11 @@
 
 import sys
 import unittest
-from StringIO import StringIO
+try:
+    from StringIO import StringIO
+except:
+    from io import StringIO
+
 
 from fadapa import Fadapa
 
@@ -20,7 +24,7 @@ class TestFadapa(unittest.TestCase):
         sys.stdout = StringIO()
         self.p_data.content()
         self.assertEqual(sys.stdout.getvalue()[:8],'##FastQC')
-
+        
     def test_raw_data(self):
         data = self.p_data.raw_data('Basic Statistics')
         self.assertEqual(data[-1], '>>END_MODULE')
