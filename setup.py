@@ -43,6 +43,6 @@ setup(name='fadapa',
 
           'Topic :: Scientific/Engineering :: Bio-Informatics',
           'Topic :: Software Development :: Libraries :: Python Modules',
-          'Topic :: Utilities',
+          'Topic :: Utilities'
           ],
 )
