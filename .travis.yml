@@ -12,7 +12,7 @@ install:
     - pip install coveralls
 
 script:
-    nosetests --with-coverage -w tests/
+    coverage run --source=fadapa setup.py test
 
 after_success:
     coveralls

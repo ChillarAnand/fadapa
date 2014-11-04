@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 import fadapa.release as rl
 
 
-with open('README.md') as fh:
+with open('README.rst') as fh:
     long_description = fh.read()
     
 setup(name='fadapa',

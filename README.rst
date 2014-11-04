@@ -3,7 +3,7 @@ Welcome to Fadapa
 
 FAstqc DAta PArser - The Easiest way to parse FastQC results.
 
-|Build| |Coverage| |Latest Version| |Supported Python versions|
+ |Status| |Build| |Coverage| |Latest Version| |Supported Python versions|
 
 Installation
 ------------
@@ -58,6 +58,8 @@ Author
 
 .. _Anand Reddy Pandikunta: http://www.avilpage.com
 
+.. |Status| image:: https://pypip.in/status/fadapa/badge.svg
+    :target: https://pypi.python.org/pypi/fadapa/
 .. |Build| image:: https://api.travis-ci.org/fadapa/fadapa.png?branch=master
    :target: http://travis-ci.org/fadapa/fadapa/
 .. |Coverage| image:: https://coveralls.io/repos/fadapa/fadapa/badge.png?branch=master
