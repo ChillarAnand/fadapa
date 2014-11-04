@@ -8,7 +8,8 @@ python:
     - 3.4
 
 install:
-    - pip install -r requirements/development.txt
+    - python setup.py install
+    - pip install -r requirements/testing.txt
     - pip install coveralls
 
 script:

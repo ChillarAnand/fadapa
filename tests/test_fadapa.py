@@ -2,6 +2,7 @@
 
 import sys
 import unittest
+from StringIO import StringIO
 
 from fadapa import Fadapa
 
@@ -9,13 +10,14 @@ from fadapa import Fadapa
 class TestFadapa(unittest.TestCase):
 
     def setUp(self):
-        self.p_data = Fadapa('fastqc_data.txt')
+        self.p_data = Fadapa('tests/fastqc_data.txt')
 
     def test_summary(self):
         summary = self.p_data.summary()
         self.assertEqual(summary[0], ['Status', 'Module Name'])
 
     def test_content(self):
+        sys.stdout = StringIO()
         self.p_data.content()
         self.assertEqual(sys.stdout.getvalue()[:8],'##FastQC')
 
@@ -26,6 +28,4 @@ class TestFadapa(unittest.TestCase):
     def test_cleaned_data(self):
         data = self.p_data.clean_data('Basic Statistics')
         self.assertEqual(data[0][0], 'Measure')
-
-
-
+        

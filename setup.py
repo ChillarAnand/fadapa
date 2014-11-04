@@ -21,6 +21,7 @@ setup(name='fadapa',
       url=rl.URL,
       packages=find_packages(),
       data_files=[],
+      test_suite='tests',
       classifiers=[
           'Development Status :: 5 - Production/Stable', 
           

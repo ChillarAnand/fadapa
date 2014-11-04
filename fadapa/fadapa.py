@@ -37,7 +37,7 @@ class Fadapa(object):
         Print the contents of the given file.
         """
         for line in self._content:
-            print(line)
+            print(line)  
             
     def raw_data(self, module):
         """
@@ -62,6 +62,5 @@ class Fadapa(object):
         filtered_data = self.raw_data(module)[1:-1]
         data_list = [list(filter(None, x.split('\t')))  \
                      for x in filtered_data]
-        print(data_list)
         data_list[0][0] = data_list[0][0][1:] 
         return data_list
