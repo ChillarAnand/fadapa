@@ -72,6 +72,7 @@ class Fadapa(object):
         :type module: str
         :return List of strings containing the clean data of module.
         """
-        data = [x.split('\t') for x in self.raw_data(module)[1:-1]]
+        data = [filter(None, x.split('\t'))
+                for x in self.raw_data(module)[1:-1]]
         data[0][0] = data[0][0][1:]
         return data
