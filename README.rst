@@ -5,6 +5,12 @@ FAstqc DAta PArser - The Easiest way to parse FastQC results.
 
  |Status| |Build| |Coverage| |Latest Version| |Supported Python versions|
 
+
+Demo
+----
+Check out this `iPython Notebook <http://nbviewer.ipython.org/github/fadapa/fadapa/blob/master/demo/Parsing%20FastQC%20Output%20Data%20With%20Fadapa!.ipynb/>`_ for demo.
+
+
 Installation
 ------------
 1. Recomended way to install is using ``pip``
