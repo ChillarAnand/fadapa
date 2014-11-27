@@ -3,7 +3,7 @@ Welcome to Fadapa
 
 FAstqc DAta PArser - The Easiest way to parse FastQC results.
 
- |Status| |Build| |Coverage| |Latest Version| |Supported Python versions|
+|Status| |Build| |Coverage| |Latest Version| |Supported Python versions|
 
 
 Demo
@@ -26,8 +26,8 @@ Installation
 3. You can also install from Github source code.
 ::
 
-   cd 
-   git clone https://github.com/fadapa/fadapa.git 
+   cd
+   git clone https://github.com/fadapa/fadapa.git
    cd fadapa
    python setup.py install
 
