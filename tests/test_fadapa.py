@@ -1,4 +1,6 @@
-# -*- encoding: utf-8 -*-
+"""
+Tests for Fadapa.
+"""
 
 import sys
 import unittest
@@ -18,13 +20,13 @@ class TestFadapa(unittest.TestCase):
 
     def test_summary(self):
         summary = self.p_data.summary()
-        self.assertEqual(summary[0], ['Status', 'Module Name'])
+        self.assertEqual(summary[0], ['Module Name', 'Status'])
 
     def test_content(self):
         sys.stdout = StringIO()
         self.p_data.content()
-        self.assertEqual(sys.stdout.getvalue()[:8],'##FastQC')
-        
+        self.assertEqual(sys.stdout.getvalue()[:8], '##FastQC')
+
     def test_raw_data(self):
         data = self.p_data.raw_data('Basic Statistics')
         self.assertEqual(data[-1], '>>END_MODULE')
@@ -32,4 +34,4 @@ class TestFadapa(unittest.TestCase):
     def test_cleaned_data(self):
         data = self.p_data.clean_data('Basic Statistics')
         self.assertEqual(data[0][0], 'Measure')
-        
+

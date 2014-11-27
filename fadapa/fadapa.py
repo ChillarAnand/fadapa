@@ -1,7 +1,6 @@
-""" 
+"""
 Python module to parse FastQC output data.
 """
-
 
 from __future__ import print_function
 
@@ -9,58 +8,70 @@ from __future__ import print_function
 class Fadapa(object):
     """
     Returns a parsed data object for given fastqc data file
-
-    :arg file_name: name of fastqc_data text file
-    :type file_name: str
     """
+
     def __init__(self, file_name, **kwargs):
+        """
+        :arg file_name: Name of fastqc_data text file.
+        :type file_name: str.
+        """
         self.file_name = file_name
         self._content = open(file_name, **kwargs).read().splitlines()
         self._m_mark = '>>'
         self._m_end = '>>END_MODULE'
-        
+
     def summary(self):
         """
         Returns a list of all modules present in the content.
-        Module begins  with  '>>Module Name',  ends with '>>END_MODULE'
+        Module begins  with  _m_mark ends with _m_end.
+
+        :return: List of modules and their status.
+
+        Sample module:
+
+        >>Basic Statistics	pass
+        #Measure	Value
+        Filename	sample1.fastq
+        >>END_MODULE
+
         """
-        data = []
-        for line in self._content:
-            if self._m_mark in line and not self._m_end in line:
-                module_name, status = line.split('\t')
-                data.append([status, module_name[2:]])
-        data.insert(0, ['Status', 'Module Name'])
+        modules = [line.split('\t') for line in self._content
+                   if self._m_mark in line and self._m_end not in line]
+        data = [[i[2:], j] for i, j in modules]
+        data.insert(0, ['Module Name', 'Status'])
         return data
 
     def content(self):
         """
         Print the contents of the given file.
+
+        :return: None
         """
         for line in self._content:
-            print(line)  
-            
+            print(line)
+
     def raw_data(self, module):
         """
         Returns raw data lines for a given module name.
 
-        :arg module: name of module as returned by _moduels function.
-        :type module: str
+        :arg module: Name of module as returned by summary function.
+        :type module: str.
+        :return: List of strings which consists of raw data of module.
         """
-        con = self._content
-        s_pos = next(con.index(x) for x in con if module in x)
-        e_pos = con[s_pos:].index(self._m_end)
-        raw_data = con[s_pos:s_pos+e_pos+1]
+        s_pos = next(self._content.index(x) for x in self._content
+                     if module in x)
+        e_pos = self._content[s_pos:].index(self._m_end)
+        raw_data = self._content[s_pos:s_pos+e_pos+1]
         return raw_data
 
     def clean_data(self, module):
         """
-        Returns a list of data for the given module.
+        Returns a cleaned data for the given module.
 
         :arg module: name of module
         :type module: str
+        :return List of strings containing the clean data of module.
         """
-        filtered_data = self.raw_data(module)[1:-1]
-        data_list = [list(filter(None, x.split('\t')))  \
-                     for x in filtered_data]
-        data_list[0][0] = data_list[0][0][1:] 
-        return data_list
+        data = [x.split('\t') for x in self.raw_data(module)[1:-1]]
+        data[0][0] = data[0][0][1:]
+        return data
