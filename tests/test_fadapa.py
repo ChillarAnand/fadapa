@@ -17,10 +17,12 @@ class TestFadapa(unittest.TestCase):
 
     def setUp(self):
         self.p_data = Fadapa('tests/fastqc_data.txt')
+        self.z_data = Fadapa('tests/fastqc.zip')
 
     def test_summary(self):
         summary = self.p_data.summary()
         self.assertEqual(summary[0], ['Module Name', 'Status'])
+        self.assertEqual(self.p_data.summary(), self.z_data.summary())
 
     def test_content(self):
         sys.stdout = StringIO()
