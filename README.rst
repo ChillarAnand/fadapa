@@ -52,17 +52,11 @@ Usage
     print(f.summary())
 
     #get raw data of any module
-    print(f.raw_module('module name'))
+    print(f.raw_data('module name'))
 
     #get cleaned data of any module
     print(f.clean_data('module name'))
 
-Author
-------
-
-`Anand Reddy Pandikunta`_
-
-.. _Anand Reddy Pandikunta: http://www.avilpage.com
 
 .. |Status| image:: https://pypip.in/status/fadapa/badge.svg
     :target: https://pypi.python.org/pypi/fadapa/
