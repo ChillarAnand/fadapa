@@ -34,7 +34,8 @@ Installation
 Usage
 -----
 
-::
+.. code-block:: python
+
 
     # import fadapa
     from fadapa import Fadapa
