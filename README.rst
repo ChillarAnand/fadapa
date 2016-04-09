@@ -3,7 +3,7 @@ Welcome to Fadapa
 
 FAstqc DAta PArser - The Easiest way to parse FastQC results.
 
-|Status| |Build| |Coverage| |Latest Version| |Supported Python versions|
+|Build| |Coverage|
 
 
 Demo
@@ -58,13 +58,7 @@ Usage
     print(f.clean_data('module name'))
 
 
-.. |Status| image:: https://pypip.in/status/fadapa/badge.svg
-    :target: https://pypi.python.org/pypi/fadapa/
 .. |Build| image:: https://api.travis-ci.org/fadapa/fadapa.png?branch=master
    :target: http://travis-ci.org/fadapa/fadapa/
 .. |Coverage| image:: https://coveralls.io/repos/fadapa/fadapa/badge.png?branch=master
    :target: https://coveralls.io/r/fadapa/fadapa?branch=master
-.. |Latest Version| image:: https://pypip.in/version/fadapa/badge.svg?text=version
-   :target: https://pypi.python.org/pypi/fadapa/
-.. |Supported Python versions| image:: https://pypip.in/py_versions/fadapa/badge.svg
-   :target: https://pypi.python.org/pypi/fadapa/
